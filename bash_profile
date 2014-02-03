@@ -3,6 +3,8 @@
 # ---------------------------------------------------------
 
 #launch sublime and load this directory
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
 alias q="subl -n -a ."
 
 #serve this directory on port 8080
@@ -11,8 +13,42 @@ alias serve_this="python -m SimpleHTTPServer"
 #what is my IP address
 alias myip="ifconfig | grep 'inet' | grep -v '127.0.0.1' | cut -d\   -f2"
 
+# Lap warmer
+alias warm='nice -n 20 ruby -e "loop {}" &'
+
+# general shortcuts
+alias :='cd ..'
+alias ::='cd ../..'
+alias :::='cd ../../..'
+
+# listing files - I usually end up using 'l' since its quick and easy
+alias l='ls -alhG'
+alias lt='l -t | less'
+
+#copy the working directory into the clipboard
+alias cwd='pwd | pbcopy'
+
 #apache shortcuts
 alias restart_apache="sudo /usr/sbin/apachectl restart"
+
+
+# The essential git commands.
+alias gs='git status' #I use this obsessively, I feel blind without it
+alias g='git'
+alias gb='git checkout -b'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gd='git diff | $EDITOR'
+alias ga='git add'
+alias gl='git log'
+
+# history options
+export HISTCONTROL=erasedups # don't store duplicate lines
+export HISTSIZE=100000 #remember 100k unique lines
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+  
 
 #
 # Functions
