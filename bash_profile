@@ -49,6 +49,9 @@ export HISTSIZE=100000 #remember 100k unique lines
 # append to the history file, don't overwrite it
 shopt -s histappend
   
+#automatically fixes your 'cd folder' spelling mistakes
+shopt -s cdspell
+
 
 #
 # Functions
