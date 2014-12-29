@@ -15,6 +15,7 @@ alias myip="ifconfig | grep 'inet' | grep -v '127.0.0.1' | cut -d\   -f2"
 
 #load packages
 alias nom="npm install && bower install"
+alias nombom="npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install"
 
 # Lap warmer
 alias warm='nice -n 20 ruby -e "loop {}" &'
